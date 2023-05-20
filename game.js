@@ -4,7 +4,7 @@ class Intro extends Phaser.Scene {
     }
     create(){
         this.add.text(50,50,"The Box").setFontSize(50)
-        this.input.on('pointerdown', () => this.scene.start('level3'))
+        this.input.on('pointerdown', () => this.scene.start('level1'))
     }
 }
 class Level1 extends Phaser.Scene {
@@ -181,7 +181,7 @@ class Level3 extends Phaser.Scene {
         //this.physics.add.collider()
         this.add.text(50,50,"Press R to restart").setFontSize(50)
         this.input.keyboard.on('keydown-R', () => {
-            this.scene.start('level2')
+            this.scene.start('level3')
         })
         const boxes = this.physics.add.group({
             defaultKey: 'box',
